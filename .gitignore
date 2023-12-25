@@ -1,0 +1,14 @@
+# Files
+.DS_Store
+.env
+.env.*
+!.env.example
+Thumbs.db
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# Directories
+node_modules
+/build
+/.svelte-kit
+/package

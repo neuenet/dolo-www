@@ -1,0 +1,87 @@
+
+@mixin center {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+}
+
+@mixin clearfix {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin font($font-weight, $relative-font-path, $font-name) {
+  @font-face {
+    font-family: $font-name;
+    font-style: normal;
+    font-weight: $font-weight;
+    src: url("#{$relative-font-path}/#{$font-weight}.woff2") format("woff2");
+  }
+}
+
+@mixin font-plus-italics($font-weight, $relative-font-path, $font-name) {
+  @font-face {
+    font-family: $font-name;
+    font-style: normal;
+    font-weight: $font-weight;
+    src: url("#{$relative-font-path}/#{$font-weight}.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: $font-name;
+    font-style: italic;
+    font-weight: $font-weight;
+    src: url("#{$relative-font-path}/#{$font-weight}i.woff2") format("woff2");
+  }
+}
+
+@mixin mono-plus-italics($font-weight, $relative-font-path, $font-name) {
+  @font-face {
+    font-family: $font-name;
+    font-style: normal;
+    font-weight: $font-weight;
+    src: url("#{$relative-font-path}/#{$font-weight}.woff2") format("woff2");
+    unicode-range: U+24, U+30-39, U+A2-A5; // $, 0-9, ¢£¤¥
+  }
+
+  @font-face {
+    font-family: $font-name;
+    font-style: italic;
+    font-weight: $font-weight;
+    src: url("#{$relative-font-path}/#{$font-weight}i.woff2") format("woff2");
+    unicode-range: U+24, U+30-39, U+A2-A5; // $, 0-9, ¢£¤¥
+  }
+}
+
+@mixin hide-text {
+  border: none;
+  color: transparent;
+  font: 0 / 0 a;
+  text-shadow: none;
+}
+
+@mixin no-user-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+@mixin selection($background-color: var(--inc-white), $text-color: var(--inc-gray-9)) {
+  &::selection {
+    background-color: $background-color;
+    color: $text-color;
+    text-shadow: none;
+  }
+
+  &::-moz-selection {
+    background-color: $background-color;
+    color: $text-color;
+    text-shadow: none;
+  }
+}
