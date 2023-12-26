@@ -2,8 +2,12 @@
 
 Dolo is a tool for Handshake; generate certificates, keys, DNS records, and a zone file for your TLDs — with ease. This repo is for its marketing site.
 
-HNS: [dolo.neuenet](https://dolo.neuenet)
-DNS: [dolo.neuenet.com](https://dolo.neuenet.com)
+
+
+### URLs
+
+- HNS: [dolo.neuenet](https://dolo.neuenet) (soon)
+- DNS: [dolo.neuenet.com](https://dolo.neuenet.com)
 
 
 
