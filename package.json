@@ -41,5 +41,5 @@
     "watch:sass": "sass --watch src/scss:static --style compressed"
   },
   "type": "module",
-  "version": "2023.12.24"
+  "version": "2023.12.26"
 }
